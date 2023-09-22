@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        height: 100vh;
+        background-color: rgb(27, 28, 52)  ;
+    }
+    .container{
+        height: 500px;
+    }
+    .h1{
+        margin-left: 500px;
+    }
+    .ttr{
+        margin-left: 450px;
+        border-radius: 50%;
+        background-color: rgb(81, 247, 66);    
+        margin-top: 5rem;
+        border: none;
+        width: 48px;
+        height: 35px;
+    }
+    .ttp{
+        margin-left: 400px;
+        border-radius:50%;
+        transition: 0.5s;
+        background-color: rgb(255, 0, 0);
+        margin-top: 5rem;
+        border: none;
+        width: 48px;
+        height: 35px;
+    }
+    img{
+        margin-left: 660px;
+    }
+    /*phone*/
+    @media (max-width: 575.98px){
+        .text-light {
+            margin-left: 200px;
+        }
+        .ttp{
+            margin-left: 310px;
+        }
+        .ttr{
+            margin-left: 30px;
+        }
+        .container{
+            margin-top: 400px;
+        }
+    }
+</style>
+<body>
+    <div class=" mt-5">
+           <h1 class="text-light h1">Do you Love ME&#128512;&#128516;</h1>
+           <div class=""><img id="img" width="100px" height="100px" onclick="changeImg()" src="img/1.png" alt=""></div> 
+            <button onclick="changeImg()" class=" ttr">Yes</button>
+            <button class=" ttp">No</button>
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        var i=0;
+        $(".ttp").click(function(){
+            if(i==0){
+                $(".ttp").css({"margin-left":"200px"});
+                i=1
+            }
+            else{
+                $(".ttp").css({"margin-left":"500px"});
+                i=0; 
+            }
+        })
+    })
+    $(document).ready(function(){
+        var i=0;
+        $(".ttr").click(function(){
+            if(i==0){
+                $("body").css({"background-color":"pink"});
+                // function changeImg(){
+                //     let displayImage = document.getElementById('img')
+                //     if(displayImage.src.match('img/love.png')){
+                //         displayImage.src = 'img/1.jpg'
+                //     }else{
+                //         displayImage.src = 'img/love.png'
+                //   }
+                }
+                i=1;
+            //}
+        })
+    })
+    function changeImg(){
+        let displayImage = document.getElementById('img')
+        if(displayImage.src.match('img/1.png')){
+            displayImage.src = 'img/love.png'
+        }
+    }
+</script>
